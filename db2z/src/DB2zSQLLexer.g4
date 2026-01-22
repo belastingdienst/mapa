@@ -3657,6 +3657,10 @@ DEGREES
 	: D E G R E E S 
 	;
 
+DGTT
+	: D G T T
+	;
+
 DIFFERENCE
 	: D I F F E R E N C E 
 	;
@@ -4035,6 +4039,10 @@ SOAPHTTPNV
 
 SOAPHTTPV
 	: S O A P H T T P V 
+	;
+
+SORT
+	: S O R T
 	;
 
 SOUNDEX

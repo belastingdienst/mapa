@@ -7992,6 +7992,10 @@ pagenumClause
 	: (PAGENUM (RELATIVE | ABSOLUTE))
 	;
 
+workFileOption
+	: FOR (SORT | DGTT)
+	;
+
 /*
 Arguments to programName are options, noted when testing new
 implementation of createTableColumnDefinition 2023-05-26.
@@ -9755,6 +9759,7 @@ createTablespaceOptionList
 	| trackmodClause
 	| pagenumClause
 	| usingSpecification2
+	| workFileOption
 	)
 	;
 
