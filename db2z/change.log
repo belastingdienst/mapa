@@ -1,7 +1,13 @@
 --2026-01-22--------------------------------------------------------------------
 Function level 508 changes.
 
-Added FOR SORT and FOR DGTT to create tablespace.
+Added FOR SORT and FOR DGTT to createTablespaceStatement via workFileOption.
+Added new scalar functions...
+
+GENERATE_UUID
+GENERATE_UUID_BINARY
+VARBINARY_FORMAT
+VARCHAR_FORMAT_BINARY
 
 --2025-10-28--------------------------------------------------------------------
 
