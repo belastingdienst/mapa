@@ -7992,6 +7992,10 @@ pagenumClause
 	: (PAGENUM (RELATIVE | ABSOLUTE))
 	;
 
+workFileOption
+	: FOR (SORT | DGTT)
+	;
+
 /*
 Arguments to programName are options, noted when testing new
 implementation of createTableColumnDefinition 2023-05-26.
@@ -9755,6 +9759,7 @@ createTablespaceOptionList
 	| trackmodClause
 	| pagenumClause
 	| usingSpecification2
+	| workFileOption
 	)
 	;
 
@@ -11307,6 +11312,8 @@ scalarFunction
 	| FLOOR
 	| GENERATE_UNIQUE
 	| GENERATE_UNIQUE_BINARY
+	| GENERATE_UUID
+	| GENERATE_UUID_BINARY
 	| GETHINT
 	| GETVARIABLE
 	| GRAPHIC
@@ -11433,10 +11440,12 @@ scalarFunction
 	| UPPER
 	| VALUE
 	| VARBINARY
+	| VARBINARY_FORMAT
 	| VARCHAR
 	| VARCHAR9
 	| VARCHAR_BIT_FORMAT
 	| VARCHAR_FORMAT
+	| VARCHAR_FORMAT_BINARY
 	| VARGRAPHIC
 	| VERIFY_GROUP_FOR_USER
 	| VERIFY_ROLE_FOR_USER
