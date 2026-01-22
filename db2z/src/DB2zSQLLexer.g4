@@ -3717,6 +3717,14 @@ GENERATE_UNIQUE_BINARY
 	: G E N E R A T E '_' U N I Q U E '_' B I N A R Y 
 	;
 
+GENERATE_UUID
+	: G E N E R A T E '_' U U I D
+	;
+	
+GENERATE_UUID_BINARY
+	: G E N E R A T E '_' U U I D '_' B I N A R Y
+	;
+	
 GETHINT
 	: G E T H I N T 
 	;
@@ -4185,8 +4193,16 @@ VARBINARY
 	: V A R B I N A R Y 
 	;
 
+VARBINARY_FORMAT
+	: V A R B I N A R Y '_' F O R M A T
+	;
+
 VARCHAR
 	: V A R C H A R 
+	;
+
+VARCHAR_FORMAT_BINARY
+	: V A R C H A R '_' F O R M A T '_' B I N A R Y
 	;
 
 VARCHAR9
