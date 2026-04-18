@@ -1,3 +1,9 @@
+--2026-04-18--------------------------------------------------------------------
+Updates per IBM COBOL 6.5 documentation.
+
+Added suboptions EMBEDDED and SEPARATE for the ADATA compile option in the
+preprocessor lexer and parser grammars.
+
 --2025-06-18--------------------------------------------------------------------
 Modified the following files to account for the IBM extension allowing the ::
 qualifier for data names.  This allows CALL Z::Y::X as an alternative

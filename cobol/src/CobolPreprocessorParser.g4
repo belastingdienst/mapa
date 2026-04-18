@@ -2,7 +2,7 @@
  Copyright (C) 2017, Ulrich Wolffgang <ulrich.wolffgang@proleap.io>
  All rights reserved.
 
- Portions copyright (C) 2019 - 2021, Craig Schneiderwent.
+ Portions copyright (C) 2019 - 2026, Craig Schneiderwent.
 
  This software may be modified and distributed under the terms
  of the MIT license. See the LICENSE file for details.
@@ -41,7 +41,8 @@ compilerXOpts
    ;
 
 compilerOption
-   : ADATA | ADV | (AFP LPARENCHAR (NOVOLATILE | VOLATILE) RPARENCHAR) | APOST
+   : ADATA (LPARENCHAR (SEPARATE | S_CHAR | EMBEDDED | E_CHAR) RPARENCHAR)? 
+   | ADV | (AFP LPARENCHAR (NOVOLATILE | VOLATILE) RPARENCHAR) | APOST
    | (ARCH LPARENCHAR literal RPARENCHAR)
    | (ARITH | AR) LPARENCHAR (EXTEND | E_CHAR | COMPAT | C_CHAR) RPARENCHAR
    | AWO

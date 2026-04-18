@@ -2,7 +2,7 @@
  Copyright (C) 2017, Ulrich Wolffgang <ulrich.wolffgang@proleap.io>
  All rights reserved.
 
- Portions copyright (C) 2019 - 2021 Craig Schneiderwent.
+ Portions copyright (C) 2019 - 2026 Craig Schneiderwent.
 
  This software may be modified and distributed under the terms
  of the MIT license. See the LICENSE file for details.
@@ -140,6 +140,7 @@ DYNAM : D Y N A M;
 EDF : E D F;
 EJECT : E J E C T;
 EJPD : E J P D;
+EMBEDDED : E M B E D D E D;
 EN : E N;
 ENDP : E N D P;
 ENDPERIOD : E N D P E R I O D;
