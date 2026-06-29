@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2021 - 2025 Craig Schneiderwent.  
+Copyright (C) 2021 - 2026 Craig Schneiderwent.  
 Portions copyright (C) 2023 - 2024 Martijn Rutte.  
 All rights reserved.
 
@@ -99,6 +99,10 @@ fragment BANG
 	: '!'
 	;
 
+fragment CIRCUMFLEX
+	: '^'
+	;
+
 EQ
 	: '='
 	;
@@ -112,15 +116,15 @@ LT
 	;
 
 GE
-	: ((GT EQ) | (BANG LT))
+	: ((GT EQ) | (BANG LT) | (CIRCUMFLEX LT))
 	;
 
 LE
-	: ((LT EQ) | (BANG GT))
+	: ((LT EQ) | (BANG GT) | (CIRCUMFLEX GT))
 	;
 
 NE
-	: ((LT GT) | (BANG EQ))
+	: ((LT GT) | (BANG EQ) | (CIRCUMFLEX EQ))
 	;
 
 PLUS
