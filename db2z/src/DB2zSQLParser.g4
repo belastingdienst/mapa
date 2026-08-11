@@ -3054,10 +3054,15 @@ dsnutilUCSRebuildIndexSpec
 	)
 	;
 
+/*
+Parentheses around ALL are optional. MartijnDPS 2026-08-11.
+The parentheses are not in the syntax diagram in IBM's documentation
+as of this date but are tolerated by DB2.
+*/
 dsnutilUCSRebuildIndexSpecIndex
 	: (
 	(DSNUTIL_INDEX DSNUTIL_DB_TS_LPAREN dsnutilUCSIndexSpec (DSNUTIL_COMMA dsnutilUCSIndexSpec)* DSNUTIL_RPAREN1)
-	| (DSNUTIL_INDEX dsnutilUCSAllInParens dsnutilUCSTablespaceSpec)
+	| (DSNUTIL_INDEX (DSNUTIL_ALL | dsnutilUCSAllInParens) dsnutilUCSTablespaceSpec)
 	| (DSNUTIL_INDEX_LIST dsnutilUCSListName)
 	)
 	;
