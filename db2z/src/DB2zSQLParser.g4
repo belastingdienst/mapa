@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2021 - 2025 Craig Schneiderwent.  
+Copyright (C) 2021 - 2026 Craig Schneiderwent.  
 Portions copyright (C) 2023 - 2025 Martijn Rutte.  
 Portions copyright (C) 2023 - 2024 Maarten van Haasteren.
 Portions copyright (C) 2025 Anil Peres-da-Silva.
@@ -3054,10 +3054,15 @@ dsnutilUCSRebuildIndexSpec
 	)
 	;
 
+/*
+Parentheses around ALL are optional. MartijnDPS 2026-08-11.
+The parentheses are not in the syntax diagram in IBM's documentation
+as of this date but are tolerated by DB2.
+*/
 dsnutilUCSRebuildIndexSpecIndex
 	: (
 	(DSNUTIL_INDEX DSNUTIL_DB_TS_LPAREN dsnutilUCSIndexSpec (DSNUTIL_COMMA dsnutilUCSIndexSpec)* DSNUTIL_RPAREN1)
-	| (DSNUTIL_INDEX dsnutilUCSAllInParens dsnutilUCSTablespaceSpec)
+	| (DSNUTIL_INDEX (DSNUTIL_ALL | dsnutilUCSAllInParens) dsnutilUCSTablespaceSpec)
 	| (DSNUTIL_INDEX_LIST dsnutilUCSListName)
 	)
 	;
@@ -3068,10 +3073,15 @@ dsnutilUCSAllInParens
 	)
 	;
 
+/*
+Parentheses around ALL are optional.
+The parentheses are not in the syntax diagram in IBM's documentation
+as of this date but are tolerated by DB2.
+*/
 dsnutilUCSRebuildIndexSpecIndexspace
 	: (
 	(DSNUTIL_INDEXSPACE DSNUTIL_DB_TS_LPAREN dsnutilUCSRebuildIndexIndexspaceSpec (DSNUTIL_COMMA dsnutilUCSRebuildIndexIndexspaceSpec)*) DSNUTIL_RPAREN1
-	| (DSNUTIL_INDEXSPACE dsnutilUCSAllInParens dsnutilUCSTablespaceSpec)
+	| (DSNUTIL_INDEXSPACE (DSNUTIL_ALL | dsnutilUCSAllInParens) dsnutilUCSTablespaceSpec)
 	| (DSNUTIL_INDEXSPACE_LIST dsnutilUCSListName)
 	)
 	;
